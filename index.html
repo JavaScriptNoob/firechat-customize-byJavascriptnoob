@@ -14,33 +14,18 @@
     <!-- Firechat -->
     <link rel='stylesheet' href='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css' />
     <script src='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js'></script>
-
-
     <script src='app.js'></script>
 
 
 </head>
 <body>
 
-<section class="container">
-    <div class="login">
-      <h1>Login to Chat</h1>
-      <form>
-        <p><input type="text" name="login" value="" placeholder="Username" id="loginUsername"></p>
-        <p><input type="password" name="password" value="" placeholder="Password" id="loginPassword"></p>
-        <p class="submit"><input type="submit" name="commit" value="Login" onclick='login();'></p>
-      </form>
-    </div>
-  </section>
 
 
 <section class="container">
     <div class="register">
       <h1>Register on Chat</h1>
-      <form>
-        <p><input type="text" name="login" value="" placeholder="Username" id="registerUsername"></p>
-        <p><input type="password" name="password" value="" placeholder="Password" id="registerPassword"></p>
-        <p class="submit"><input type="submit" name="commit" value="Register" onclick='register();'></p>
+              <p class="submit"><input type="submit" id="commit" name="commit" value="Register" onclick=''></p>
       </form>
     </div>
   </section>
@@ -48,5 +33,15 @@
 
     <div id='firechat-wrapper'></div>
 
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>// Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAGbB6cy-g1Q6W7zG31g7RKNvGE3GY8yKI",
+        authDomain: "firechatcustom.firebaseapp.com",
+        databaseURL: "https://firechatcustom.firebaseio.com",
+        projectId: "firechatcustom",
+        storageBucket: "firechatcustom.appspot.com",
+        messagingSenderId: "879645534714"};
+    firebase.initializeApp(config);</script>
 </body>
 </html>

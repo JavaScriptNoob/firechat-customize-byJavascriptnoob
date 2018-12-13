@@ -1,52 +1,30 @@
-var chatRef = new Firebase('https://komvux-firebase11111.firebaseio.com/');
+ window.onload = function () {
 
-// Create new user
+ var mainButton = document.getElementById('commit');
+ mainButton.addEventListener('click',function () {
+    
 
-function register() {
-    var username = document.getElementById("registerUsername").value;
-    var password = document.getElementById("registerPassword").value;
-    chatRef.createUser({
-        email    : username,
-        password : password
-    }, function(error, userData) {
-        if (error) {
-            console.log("Error creating user:", error);
-        } else {
-            console.log("Successfully created user account with uid:", userData.uid);
-        }
-        return false;
-    });
-
+    var provider = new firebase.auth.GithubAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+    }
+ )
 }
-
-// Login user
-
-function login() {
-    var username = document.getElementById("loginUsername").value;
-    var password = document.getElementById("loginPassword").value;
-    chatRef.authWithPassword({
-        email    : username,
-        password : password
-    }, function(error, authData) {
-        if (error) {
-            console.log("Login Failed!", error);
-        } else {
-            console.log("Authenticated successfully with payload:", authData);
-        }
-        return false
-    });
-
-    chatRef.onAuth(function(authData) {
-  // Once authenticated, instantiate Firechat with the user id and user name
-  if (authData) {
-    initChat(authData);
-  }
-});
-
-}
-
-
-function initChat(authData) {
-  var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
-  chat.setUser(authData.uid, authData[authData.provider].displayName);
-}
+  
+ 
+ 
+ 
