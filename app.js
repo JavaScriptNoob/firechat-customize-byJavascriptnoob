@@ -2,21 +2,21 @@ var chatRef = new Firebase('https://komvux-firebase11111.firebaseio.com/');
 
 // Create new user
 
-// function register() {
-//     var username = document.getElementById("registerUsername").value;
-//     var password = document.getElementById("registerPassword").value;
-//     chatRef.createUser({
-//         email    : username,
-//         password : password
-//     }, function(error, userData) {
-//         if (error) {
-//             console.log("Error creating user:", error);
-//         } else {
-//             console.log("Successfully created user account with uid:", userData.uid);
-//         }
-//     });
+function register() {
+    var username = document.getElementById("registerUsername").value;
+    var password = document.getElementById("registerPassword").value;
+    chatRef.createUser({
+        email    : username,
+        password : password
+    }, function(error, userData) {
+        if (error) {
+            console.log("Error creating user:", error);
+        } else {
+            console.log("Successfully created user account with uid:", userData.uid);
+        }
+    });
 
-// }
+}
 
 // Login user
 
