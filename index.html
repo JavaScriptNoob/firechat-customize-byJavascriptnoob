@@ -6,20 +6,7 @@
     <title></title>
 
     <!-- jQuery -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
-    <script>// Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyAGbB6cy-g1Q6W7zG31g7RKNvGE3GY8yKI",
-        authDomain: "firechatcustom.firebaseapp.com",
-        databaseURL: "https://firechatcustom.firebaseio.com",
-        projectId: "firechatcustom",
-        storageBucket: "firechatcustom.appspot.com",
-        messagingSenderId: "879645534714"};
-    firebase.initializeApp(config);</script>
-
-    <script src='app.js'></script>
+    
 
 
 </head>
@@ -39,5 +26,47 @@
     <div id='firechat-wrapper'></div>
 
     
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+    <!-- Firechat -->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css" />
+    <script src="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.js"></script>
+   
+    <script>// Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAGbB6cy-g1Q6W7zG31g7RKNvGE3GY8yKI",
+        authDomain: "firechatcustom.firebaseapp.com",
+        databaseURL: "https://firechatcustom.firebaseio.com",
+        projectId: "firechatcustom",
+        storageBucket: "firechatcustom.appspot.com",
+        messagingSenderId: "879645534714"};
+    firebase.initializeApp(config);</script>
+
+    <script src='app.js'></script>
+    <title>Document</title>
+</head>
+<body>
+  
+
+
+<section class="container">
+<div class="register">
+      <h1>Register on Chat</h1>
+              <p class="submit"><input type="submit" id="commit" name="commit" value="Register" onclick=''></p>
+      </form>
+    </div>
+  </section>
+
+
+    <div id='firechat-wrapper'></div>  
 </body>
 </html>
