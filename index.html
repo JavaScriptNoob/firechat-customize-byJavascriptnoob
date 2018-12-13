@@ -7,13 +7,17 @@
 
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>// Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAGbB6cy-g1Q6W7zG31g7RKNvGE3GY8yKI",
+        authDomain: "firechatcustom.firebaseapp.com",
+        databaseURL: "https://firechatcustom.firebaseio.com",
+        projectId: "firechatcustom",
+        storageBucket: "firechatcustom.appspot.com",
+        messagingSenderId: "879645534714"};
+    firebase.initializeApp(config);</script>
 
-    <!-- Firebase -->
-    <script src='https://cdn.firebase.com/js/client/2.1.0/firebase.js'></script>
-
-    <!-- Firechat -->
-    <link rel='stylesheet' href='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css' />
-    <script src='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js'></script>
     <script src='app.js'></script>
 
 
@@ -33,15 +37,6 @@
 
     <div id='firechat-wrapper'></div>
 
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-    <script>// Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyAGbB6cy-g1Q6W7zG31g7RKNvGE3GY8yKI",
-        authDomain: "firechatcustom.firebaseapp.com",
-        databaseURL: "https://firechatcustom.firebaseio.com",
-        projectId: "firechatcustom",
-        storageBucket: "firechatcustom.appspot.com",
-        messagingSenderId: "879645534714"};
-    firebase.initializeApp(config);</script>
+    
 </body>
 </html>
