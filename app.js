@@ -14,6 +14,7 @@ function register() {
         } else {
             console.log("Successfully created user account with uid:", userData.uid);
         }
+        return false;
     });
 
 }
