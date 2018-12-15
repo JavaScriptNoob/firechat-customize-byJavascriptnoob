@@ -37,5 +37,5 @@ firebase.auth().onAuthStateChanged(function(user) {
     var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
     chat.setUser(user.uid, user.displayName);
       }
- 
+// console.log("test id ----->" + id);
  
